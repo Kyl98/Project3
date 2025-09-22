@@ -1,0 +1,37 @@
+/* Navbar */
+header {
+  background: #f7f7f7;
+  color: #0b0b0b;
+  padding: 10px 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  background: #040404;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 130px;
+  justify-content: flex-end;
+}
+
+.navbar ul li a {
+  color: #030303;
+  text-decoration: none;
+
+}
+
+.cart {
+  font-size: 20px;
+}
