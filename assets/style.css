@@ -1,8 +1,21 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #222;
+}
+
 /* Navbar */
 header {
-  background: #f7f7f7;
-  color: #0b0b0b;
-  padding: 10px 20px;
+  background: #fefefe;
+  color: #070707;
+  padding: 25px 20px;
 }
 
 .navbar {
@@ -12,7 +25,7 @@ header {
 }
 
 .navbar .logo {
-  background: #040404;
+  background: #444;
   color: #fff;
   padding: 5px 15px;
   border-radius: 5px;
@@ -22,16 +35,68 @@ header {
 .navbar ul {
   list-style: none;
   display: flex;
-  gap: 130px;
-  justify-content: flex-end;
+  gap: 200px;
+  padding-left: 400px;
 }
 
 .navbar ul li a {
-  color: #030303;
+  color: #060606;
   text-decoration: none;
-
 }
 
 .cart {
   font-size: 20px;
+}
+
+/* Banner */
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #CFCFCF;
+  color: #fff;
+  padding: 20px;
+}
+
+/* ===== Titre Acceuil en Noir ======= */
+
+.banner-titre {
+    background: #000;
+    color: #fff;
+    padding-bottom: 20px;
+    padding-top: 20px;
+
+}
+
+.banner-titre h1 {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.banner-text h2 {
+  margin-bottom: 10px;
+  font-size: 40px;
+  }
+
+.banner-img img {
+  max-width: 600px;
+  border-radius: 8px;
+}
+
+/* Sections */
+.section {
+  padding: 30px 20px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.section h3 {
+  margin-bottom: 15px;
 }
