@@ -256,3 +256,49 @@ CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE 
   border-radius: 5px;
 }
 
+/* Cards */
+.cards-catalogue {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px 30px;
+}
+
+.card-catalogue {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  background: white;
+}
+
+.card-catalogue img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card-catalogue h3 {
+  margin: 10px 0;
+}
+
+.card-catalogue p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.card-catalogue button {
+  background: #3f51b5;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.card-catalogue button:hover {
+  background: #2c3e99;
+}
+
