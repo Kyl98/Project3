@@ -1,0 +1,223 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #222;
+}
+
+/* Navbar */
+header {
+  background: #fefefe;
+  color: #070707;
+  padding: 25px 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  background: #444;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 200px;
+  padding-left: 400px;
+}
+
+.navbar ul li a {
+  color: #060606;
+  text-decoration: none;
+}
+
+.cart {
+  font-size: 20px;
+}
+
+/* Banner */
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #CFCFCF;
+  color: #fff;
+  padding: 20px;
+}
+
+/* ===== Titre Acceuil en Noir ======= */
+
+.banner-titre {
+    background: #000;
+    color: #fff;
+    padding-bottom: 20px;
+    padding-top: 20px;
+
+}
+
+.banner-titre h1 {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* Bannière */
+
+
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #b3aeae;        /* Fond noir */
+  color: #141313;             /* Texte blanc */
+  padding: 50px 40px;
+  position: relative;      /* Pour placer le bouton */
+}
+
+.banner-text {
+  max-width: 50%;          /* Le texte occupe la moitié gauche */
+}
+
+.banner-text h2 {
+  margin-bottom: 15px;
+  font-size: 35px;
+  line-height: 1.4;
+}
+
+.banner-img img {
+  max-width: 600px;        /* Taille max de l’image à droite */
+  border-radius: 5px;
+}
+
+/* Bouton Nouveautés en bas à droite */
+.nouveautes {
+  position: absolute;
+  bottom: 10px;
+  right: 40px;
+}
+
+.nouveautes .btn {
+  padding: 8px 20px;
+  background: #fff;
+  color: #000;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Sections */
+.section {
+  padding: 30px 20px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.section h3 {
+ 
+  border-color: #000;
+}
+
+.btn {
+  padding: 8px 25px;
+  border: none;
+  background: #111;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+.btn-titre {
+ background: #f7f6f6;
+  color: #0a0a0a;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 8px 25px; 
+  margin-bottom: 15px;
+}
+
+.nouveautés {
+    margin-top: 400px;
+}
+
+
+input[type="text"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  padding: 8 25px;
+}
+
+/* Cards */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 200px;
+}
+
+.card:hover {
+    transform: scale(1.1, 1.1);
+}
+
+
+.card {
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.card p {
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 15px 10px 10px;  /* top 15px, côtés 10px, bas 40px */
+  font-size: 14px;
+}
+
+
+footer p {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
