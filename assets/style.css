@@ -326,3 +326,21 @@ CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE 
   color: white;
   font-weight: bold;
 }
+
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+  color: white;
+  padding: 15px 30px;
+  margin-top: 30px;
+}
+
+footer nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
