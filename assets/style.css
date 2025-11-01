@@ -344,3 +344,140 @@ footer nav a {
   margin-left: 20px;
   text-decoration: none;
 }
+
+
+
+/* ==========================================================================================================================================================
+ PANIER    PANIER     PANIER    PANIER   PANIER   PANIER    PANIER    PANIER    PANIER    PANIER    PANIER    PANIER    PANIER    PANIER   PANIER   PANIER
+=============================================================================================================================================================*/
+
+
+/* ----- LISTE DES MANGAS ----- */
+
+.cart-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+
+.cart-list {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cart-item {
+  display: flex;
+  background: white;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+.cart-item:hover {
+  transform: scale(1.01);
+}
+
+.cart-item img {
+  width: 100px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.cart-info {
+  margin-left: 15px;
+  flex: 1;
+}
+
+.cart-info h3 {
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.cart-info p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.price {
+  color: #3046c5;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.actions {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.actions button {
+  background: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.actions button:hover {
+  background: #d8e0ff;
+}
+
+.delete {
+  color: #e63946;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+/* ----- RÉSUMÉ COMMANDE ----- */
+.cart-summary {
+  flex: 1;
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.cart-summary h2 {
+  color: #3046c5;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.summary-line, .summary-total {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.summary-total {
+  font-weight: bold;
+  color: #222;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+.checkout {
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px;
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.checkout:hover {
+  background: #43a047;
+}
