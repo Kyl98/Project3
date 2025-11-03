@@ -665,6 +665,7 @@ h2 {
   margin-bottom: 15px;
   border-bottom: 2px solid #3f51b5;
   padding-bottom: 8px;
+  margin-top: 15px;
 }
 
 label {
@@ -776,6 +777,6 @@ hr {
 
 .total {
   font-size: 18px;
-  color: #3f51b5;
+  color:#236cb0;
   font-weight: bold;
 }
