@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Panier Manga</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="navbar">
+      <div class="logo">LOGO</div>
+      <nav>
+        <ul>
+          <li><a href="#">Accueil</a></li>
+          <li><a href="#">Catalogue</a></li>
+          <li><a href="#">Location</a></li>
+        </ul>
+      </nav>
+      <div class="cart">🛒</div>
+    </div>
+  </header>
+
+  <main>
+    <section class="catalogue">
+      <h1>PANIER</h1>
+
+       <div class="filters">
+        <input type="text-catalogue" placeholder="Rechercher un manga...">
+        <select>
+          <option>Tous les genres</option>
+          <option>Kodomo</option>
+          <option>Shônen</option>
+          <option>Shôjo</option>
+          <option>Seinen</option>
+          <option>Josei</option>
+          <option>Isekai</option>
+          <option>Mecha</option>
+          <option>Slice of Life</option>
+        </select>
+
+        <select>
+          <option>Catégories</option>
+          <option>Combats</option>
+          <option>Sport</option>
+          <option>Action</option>
+          <option>Jeux</option>
+          <option>Voyage</option>
+          <option>Musique</option>
+          <option>Horreur/Gore</option>
+          <option>Romance</option>
+          <option>Policier</option>
+          <option>Comédies</option>
+          <option>Gastronomie</option>
+          <option>Surnaturels</option>
+          <option>Science-Fiction</option>
+          <option>Psycologique</option>
+          <option>Survival Game</option>
+          <option>Ecole</option>
+          <option>Fantasy</option>
+          <option>Mafia/Gang</option>
+          <option>Surnaturels</option>
+        </select>
+
+        <select>
+          <option>A - Z</option>
+          <option>A</option>
+          <option>B</option>
+          <option>C</option>
+          <option>D</option>
+          <option>E</option>
+          <option>F</option>
+          <option>G</option>
+          <option>H</option>
+          <option>I</option>
+          <option>J</option>
+          <option>K</option>
+          <option>L</option>
+          <option>M</option>
+          <option>N</option>
+          <option>O</option>
+          <option>P</option>
+          <option>Q</option>
+          <option>R</option>
+          <option>S</option>
+          <option>T</option>
+          <option>U</option>
+          <option>V</option>
+          <option>W</option>
+          <option>X</option>
+          <option>Y</option>
+          <option>Z</option>
+        </select>
+      </div>
+</section>
+
+  <div class="cart-layout">
+      <!-- Liste des mangas -->
+      <div class="cart-list">
+        <div class="cart-item">
+          <img src="../assets/images/Fairy Tail.jpg" alt="Fairy Tail" />
+          <div class="cart-info">
+            <h3>Fairy Tail</h3>
+            <p>Shōnen • 12 tomes dispo</p>
+            <p class="price">16,99 € / tome</p>
+            <div class="actions">
+              <button>-</button>
+              <span>1</span>
+              <button>+</button>
+              <a href="#" class="delete">Supprimer</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="cart-item">
+          <img src="../assets/images/Eminence_in_Shadow_1.jpg" alt="Eminence in Shadow" />
+          <div class="cart-info">
+            <h3>Eminence in Shadow</h3>
+            <p>Shōnen • 20 tomes dispo</p>
+            <p class="price">6,99 € / tome</p>
+            <div class="actions">
+              <button>-</button>
+              <span>1</span>
+              <button>+</button>
+              <a href="#" class="delete">Supprimer</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cart-item">
+          <img src="../assets/images/Jojo pt2.jpg" alt="Jojo's Bizarre Adventure" />
+          <div class="cart-info">
+            <h3>Jojo's Bizarre Adventure</h3>
+            <p>Shōnen • 15 tomes dispo</p>
+            <p class="price">21,99 € / tome</p>
+            <div class="actions">
+              <button>-</button>
+              <span>1</span>
+              <button>+</button>
+              <a href="#" class="delete">Supprimer</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="cart-item">
+          <img src="../assets/images/MHA.jpg" alt="My Hero Academia" />
+          <div class="cart-info">
+            <h3>My Hero Academia</h3>
+            <p>Isekai • 20 tomes dispo</p>
+            <p class="price">27,99 € / tome</p>
+            <div class="actions">
+              <button>-</button>
+              <span>1</span>
+              <button>+</button>
+              <a href="#" class="delete">Supprimer</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Résumé commande -->
+      <aside class="cart-summary">
+        <h2>Résumé de la commande</h2>
+        <div class="summary-line">
+          <span>Articles :</span><span>4</span>
+        </div>
+        <div class="summary-line">
+          <span>Total HT :</span><span>70,99 €</span>
+        </div>
+        <div class="summary-line">
+          <span>TVA :</span><span>5,99 €</span>
+        </div>
+        <div class="summary-total">
+          <span>Total TTC :</span><span>76,99 €</span>
+        </div>
+        <button class="checkout">Passer la commande</button>
+      </aside>
+    </div>
+  </main>
+
+   <!-- Footer -->
+  <footer>
+    <p>© 2025 BLABLALALA — Tous droits réservés</p>
+    <nav>
+      <a href="#">Accueil</a>
+      <a href="#">Catalogue</a>
+      <a href="#">Location</a>
+    </nav>
+  </footer>
+
+
+</body>
+</html>

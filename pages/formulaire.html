@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+    
+  <!-- Header -->
+  <header>
+    <div class="navbar">
+      <div class="logo">LOGO</div>
+      <nav>
+        <ul>
+          <li><a href="#">Accueil</a></li>
+          <li><a href="#">Catalogue</a></li>
+          <li><a href="#">Location</a></li>
+        </ul>
+      </nav>
+      <div class="cart">🛒</div>
+    </div>
+  </header>
+
+  <main>
+    <section class="catalogue">
+      <h1>FORMULAIRE</h1>
+</section>
+
+
+   
+  <main class="container">
+    <section class="form-section">
+      <h2>Informations du client</h2>
+      <form action="#" method="post">
+        <label for="nom">Nom complet</label>
+        <input type="text" id="nom" name="nom" placeholder="Ex : Laury Bentier" required>
+
+        <label for="email">Adresse e-mail</label>
+        <input type="email" id="email" name="email" placeholder="exemple@mail.com" required>
+
+        <label for="adresse">Adresse</label>
+        <input type="text" id="adresse" name="adresse" placeholder="Rue, numéro..." required>
+
+        <div class="row">
+          <div>
+            <label for="ville">Ville</label>
+            <input type="text" id="ville" name="ville" placeholder="Ville" required>
+          </div>
+          <div>
+            <label for="codePostal">Code postal</label>
+            <input type="text" id="codePostal" name="codePostal" placeholder="75000" required>
+          </div>
+        </div>
+
+        <label for="pays">Pays</label>
+        <select id="pays" name="pays" required>
+          <option value="">Sélectionnez un pays</option>
+          <option value="fr">France</option>
+          <option value="be">Belgique</option>
+          <option value="ch">Suisse</option>
+          <option value="ca">Canada</option>
+          <option value="us">Etats Unis</option>
+          <option value="ja">Japon</option>
+          <option value="ch">Chine</option>
+          </select>
+
+        <h2>Mode de paiement</h2>
+
+        <div class="payment-methods">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" alt="Visa">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Mastercard_2019_logo.svg" alt="MasterCard">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal">
+        </div>
+
+        <label for="numeroCarte">Numéro de carte</label>
+        <input type="text" id="numeroCarte" name="numeroCarte" maxlength="19" placeholder="1234 1234 1234 1234" required>
+
+        <div class="row">
+          <div>
+            <label for="expiration">Date d’expiration</label>
+            <input type="text" id="expiration" name="expiration" placeholder="MM/AA" required>
+          </div>
+          <div>
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" name="cvv" maxlength="3" placeholder="123" required>
+          </div>
+        </div>
+
+        <button type="submit" class="btn">Payer maintenant</button>
+      </form>
+    </section>
+
+    <aside class="summary-section">
+      <h2>Résumé de la commande</h2>
+      <ul class="order-list">
+        <li><span>One Punch Man - Tome 01</span><span>7,50 €</span></li>
+        <li><span>Seven Deadly Sins - Tome 04</span><span>5,50 €</span></li>
+        <li><span>Jujutsu Kaisen - Tome 07</span><span>8,99 €</span></li>
+        <li><span>Mob Pyscho 100 - Tome 03</span><span>6,99 €</span></li>
+      </ul>
+      <hr>
+      <div class="totals">
+        <p><strong>Sous-total :</strong> <span>28,02 €</span></p>
+        <p><strong>Frais de port :</strong> <span>0,00 €</span></p>
+        <p class="total"><strong>Total :</strong> <span>28,02 €</span></p>
+      </div>
+    </aside>
+  </main>
+  </main>
+
+
+
+
+
+
+<!-- Footer -->
+  <footer>
+    <p>© 2025 BLABLALALA — Tous droits réservés</p>
+    <nav>
+      <a href="#">Accueil</a>
+      <a href="#">Catalogue</a>
+      <a href="#">Location</a>
+    </nav>
+  </footer>
+
+
+</body>
+</html>

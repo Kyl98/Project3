@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Panier Manga</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="navbar">
+      <div class="logo">LOGO</div>
+      <nav>
+        <ul>
+          <li><a href="#">Accueil</a></li>
+          <li><a href="#">Catalogue</a></li>
+          <li><a href="#">Location</a></li>
+        </ul>
+      </nav>
+      <div class="cart">🛒</div>
+    </div>
+  </header>
+
+  <main>
+    <section class="catalogue">
+      <h1>DETAILS</h1>
+
+</section>
+
+<div class="product-layout">
+      <!-- Galerie d'images -->
+      <div class="product-gallery">
+        <div class="main-image">
+          <img src="../assets/images/OPM.jpg" alt="One Punch Man" />
+
+        </div>
+
+        <div class="thumbnail-gallery">
+          <img src="../assets/images/OPM2.jpg" alt="mini1" class="active" />
+          <img src="../assets/images/OPM3.jpg" alt="mini2" />
+          <img src="../assets/images/OPM7.jpg" alt="mini3" />
+          <img src="../assets/images/OPM9.jpg" alt="mini4" />
+          <img src="../assets/images/OPM13.jpg" alt="mini5" />
+          <img src="../assets/images/OPM28.jpg" alt="mini6" />
+          <img src="../assets/images/OPM30.jpg" alt="mini7" />
+
+        </div>
+      </div>
+
+      <!-- Infos produit -->
+      <div class="product-info">
+        <h2>One Punch Man</h2>
+        <p class="genre">Genre : Shōnen, Action, Comédie, Super-héros</p>
+
+        <p class="price">7,50 € / tome</p>
+
+        <div class="details-block">
+          <h3>Description</h3>
+          <p>
+            <strong>One Punch Man</strong> raconte l’histoire de Saitama, un héros tellement puissant qu’il peut terrasser n’importe quel ennemi d’un seul coup de poing. 
+            Face à cette force écrasante, il s’ennuie profondément et cherche un adversaire à sa hauteur. 
+            Ce manga mêle avec brio scènes d’action spectaculaires et humour décalé, tout en explorant le quotidien d’un super-héros blasé. 
+            Une série incontournable pour les fans d’action et de satire des codes du genre super-héros.
+          </p>
+        </div>
+
+        <div class="details-block">
+          <h3>Détails du produit</h3>
+          <ul>
+            <li>Auteur : ONE</li>
+            <li>Illustrateur : Yūsuke Murata</li>
+            <li>Éditeur : Kurokawa</li>
+            <li>Nombre de tomes disponibles : 35</li>
+            <li>Statut : En Cours</li>
+          </ul>
+        </div>
+
+
+        <div class="range-selector">
+        <h3>Choisir une plage de tomes :</h3>
+        <label>Du <input type="number" min="1" max="999" value="1" id="start-tome"></label>
+        <label>au <input type="number" min="1" max="999" value="5" id="end-tome"></label>
+        </div>
+
+        <div class="purchase-box">
+          <label for="quantity">Quantité :</label>
+          <input type="number" id="quantity" min="1" value="1" />
+          <button class="add-to-cart">Ajouter au panier</button>
+        </div>
+
+
+        
+
+      </div>
+    </div>
+
+
+</main>
+
+ <!-- Footer -->
+  <footer>
+    <p>© 2025 BLABLALALA — Tous droits réservés</p>
+    <nav>
+      <a href="#">Accueil</a>
+      <a href="#">Catalogue</a>
+      <a href="#">Location</a>
+    </nav>
+  </footer>
+
+
+</body>
+</html>
