@@ -780,3 +780,93 @@ hr {
   color:#236cb0;
   font-weight: bold;
 }
+
+
+/* ==========================================================================================
+CONFIRMATION CONFIRMATION CONFIRMATION CONFIRMATION CONFIRMATION CONFIRMATION CONFIRMATION
+==============================================================================================*/
+
+.confirmation-container {
+    width: 100%;
+    max-width: 700px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 40px;
+    margin-left: 400px;
+    display: flex;
+    align-items: center;
+}
+
+.confirmation-card {
+    text-align: center;
+}
+
+.icon-check {
+    font-size: 3rem;
+    color: #4CAF50;
+}
+
+h2 {
+    color: #3f51b5;
+    margin-top: 15px;
+}
+
+.message {
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.order-details {
+    background: #f2f4ff;
+    border: 1px solid #d0d4f2;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.order-details p {
+    margin: 8px 0;
+}
+
+/* === Boutons === */
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.button_check {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn_acceuil {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-green:hover {
+    background-color: #45a049;
+}
+
+.btn-grey {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.btn-grey:hover {
+    background-color: #d5d5d5;
+}
+
+.info {
+    font-size: 0.9rem;
+    color: #555;
+}
