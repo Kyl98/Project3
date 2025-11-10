@@ -25,11 +25,15 @@ header {
 }
 
 .navbar .logo {
-  background: #444;
+  background: #ffffff;
   color: #fff;
   padding: 5px 15px;
   border-radius: 5px;
   font-weight: bold;
+}
+
+.logo img {
+  max-width: 50px;
 }
 
 .navbar ul {
@@ -796,6 +800,7 @@ CONFIRMATION CONFIRMATION CONFIRMATION CONFIRMATION CONFIRMATION CONFIRMATION CO
     margin-left: 400px;
     display: flex;
     align-items: center;
+    margin-top: 20px;
 }
 
 .confirmation-card {
@@ -808,7 +813,7 @@ CONFIRMATION CONFIRMATION CONFIRMATION CONFIRMATION CONFIRMATION CONFIRMATION CO
 }
 
 h2 {
-    color: #3f51b5;
+    color:#050505;
     margin-top: 15px;
 }
 
@@ -851,20 +856,27 @@ h2 {
 .btn_acceuil {
     background-color: #4CAF50;
     color: white;
+    border-radius: 10px;
+    padding: 10px;
 }
 
-.btn-green:hover {
-    background-color: #45a049;
+.btn_acceuil:hover {
+    background-color: #000000;
 }
 
-.btn-grey {
+.btn_retour {
     background-color: #e0e0e0;
     color: #333;
+    padding: 10px;
+    border-radius: 10px;
 }
 
-.btn-grey:hover {
-    background-color: #d5d5d5;
+.btn_retour:hover {
+    background-color: #000000;
+    color: white;
 }
+
+
 
 .info {
     font-size: 0.9rem;
