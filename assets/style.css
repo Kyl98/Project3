@@ -25,11 +25,15 @@ header {
 }
 
 .navbar .logo {
-  background: #444;
+  background: #ffffff;
   color: #fff;
   padding: 5px 15px;
   border-radius: 5px;
   font-weight: bold;
+}
+
+.logo img {
+  max-width: 50px;
 }
 
 .navbar ul {
@@ -779,4 +783,102 @@ hr {
   font-size: 18px;
   color:#236cb0;
   font-weight: bold;
+}
+
+
+/* ==========================================================================================
+CONFIRMATION CONFIRMATION CONFIRMATION CONFIRMATION CONFIRMATION CONFIRMATION CONFIRMATION
+==============================================================================================*/
+
+.confirmation-container {
+    width: 100%;
+    max-width: 700px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 40px;
+    margin-left: 400px;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.confirmation-card {
+    text-align: center;
+}
+
+.icon-check {
+    font-size: 3rem;
+    color: #4CAF50;
+}
+
+h2 {
+    color:#050505;
+    margin-top: 15px;
+}
+
+.message {
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.order-details {
+    background: #f2f4ff;
+    border: 1px solid #d0d4f2;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.order-details p {
+    margin: 8px 0;
+}
+
+/* === Boutons === */
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.button_check {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn_acceuil {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.btn_acceuil:hover {
+    background-color: #000000;
+}
+
+.btn_retour {
+    background-color: #e0e0e0;
+    color: #333;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.btn_retour:hover {
+    background-color: #000000;
+    color: white;
+}
+
+
+
+.info {
+    font-size: 0.9rem;
+    color: #555;
 }
