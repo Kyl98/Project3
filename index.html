@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil MangaBox</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="shortcut icon" href="./assets/images/Favicon MangaBox.png" />
 </head>
 <body>
 
  <!-- Header -->
   <header>
     <div class="navbar">
-      <div class="logo"><img src="./assets/images/LogoFavicon-removebg-preview.png"></div>
+      <div class="logo"><img src="./assets/images/Logo_MangaBox-removebg-preview.png"></div>
       <nav>
         <ul>
           <li><a href="index.html">Accueil</a></li>
@@ -51,86 +52,319 @@
   <section class="section">
     <div class="section-header">
       <button class="btn-titre">Populaires</button>
-      <input type="text" placeholder="Rechercher un manga...">
+      <div class="filters">
+        <input type="text-catalogue" placeholder="Rechercher un manga...">
+        <select>
+          <option>Tous les genres</option>
+          <option>Kodomo</option>
+          <option>Shônen</option>
+          <option>Shôjo</option>
+          <option>Seinen</option>
+          <option>Josei</option>
+          <option>Isekai</option>
+          <option>Mecha</option>
+          <option>Slice of Life</option>
+        </select>
+
+        <select>
+          <option>Catégories</option>
+          <option>Combats</option>
+          <option>Sport</option>
+          <option>Action</option>
+          <option>Jeux</option>
+          <option>Voyage</option>
+          <option>Musique</option>
+          <option>Horreur/Gore</option>
+          <option>Romance</option>
+          <option>Policier</option>
+          <option>Comédies</option>
+          <option>Gastronomie</option>
+          <option>Surnaturels</option>
+          <option>Science-Fiction</option>
+          <option>Psycologique</option>
+          <option>Survival Game</option>
+          <option>Ecole</option>
+          <option>Fantasy</option>
+          <option>Mafia/Gang</option>
+          <option>Surnaturels</option>
+        </select>
+
+        <select>
+          <option>A - Z</option>
+          <option>A</option>
+          <option>B</option>
+          <option>C</option>
+          <option>D</option>
+          <option>E</option>
+          <option>F</option>
+          <option>G</option>
+          <option>H</option>
+          <option>I</option>
+          <option>J</option>
+          <option>K</option>
+          <option>L</option>
+          <option>M</option>
+          <option>N</option>
+          <option>O</option>
+          <option>P</option>
+          <option>Q</option>
+          <option>R</option>
+          <option>S</option>
+          <option>T</option>
+          <option>U</option>
+          <option>V</option>
+          <option>W</option>
+          <option>X</option>
+          <option>Y</option>
+          <option>Z</option>
+        </select>
+      </div>
      
     </div>
-    <div class="card-container">
-      <div class="card">
-        <img src="assets/images/Frieren.jpg" alt="Manga">
-              <button class="btn">$10.99</button>
+
+
+    <!---- Cartes (Conteneur) ---->
+     <div class="card-container">
+        <!-- Populaires Cards -->
+        <div class="product-card">
+            <span class="best-seller">Populaires</span>
+            <div class="product-image">
+                <img src="./assets/images/Frieren.jpg" alt="Frieren">
+                <button class="favorite-btn">♡</button>
             </div>
-
-      <div class="card">
-        <img src="assets/images/Dandadan.jpg" alt="Manga">
-         <button class="btn">$19.99</button>
-      </div>
-
-      <div class="card">
-        <img src="assets/images/BlueLock.jpg" alt="Manga">
-         <button class="btn">$15.99</button>
-      </div>
-      <div class="card">
-        <img src="assets/images/Carnets de l'Apoticaire.jpg" alt="Manga">
-        <button class="btn">$5.99</button>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- Section Dernières Sorties -->
-  <section class="section">
-      <button class="btn-titre">Dernières Sorties</button>
-    <div class="card-container">
-      <div class="card"><img src="assets/images/Eminence_in_Shadow_1.jpg"> 
-        <button class="btn">$9.99</button>
-    </div>
-
-      <div class="card"><img src="assets/images/Berserk.jpg"> 
-        <button class="btn">$29.99</button>
-    </div>
-
-      <div class="card"><img src="assets/images/HxH.jpg">
-         <button class="btn">$19.99</button>
-    </div>
-
-      <div class="card"><img src="assets/images/Tokyo Ghoul.jpg"> 
-        <button class="btn">$13.99</button>
-    </div>
-    </div>
-  </section>
-
-  <!-- Section Classiques -->
-  <section class="section">
-         <button class="btn-titre">Classiques</button>
-    <div class="card-container">
-      <div class="card"><img src="assets/images/SNK.jpg"> 
-        <button class="btn">$40.99</button>
-    </div>
-
-      <div class="card"><img src="assets/images/Death Note.jpg">
-         <button class="btn">$25.99</button>
+            <h3 class="product-title">Frieren</h3>
+            <button class="add-to-cart">ajouter au panier</button>
         </div>
 
-      <div class="card"><img src="assets/images/OnePiece.jpg"> 
-        <button class="btn">$60.99</button>
-    </div>
+        <div class="product-card">
+            <span class="best-seller">Populaires</span>
+            <div class="product-image">
+                <img src="./assets/images/Blue Lock.jpg" alt="Blue Lock">
+                <button class="favorite-btn">♡</button>
+            </div>
+            <h3 class="product-title">Blue Lock</h3>
+            <button class="add-to-cart">ajouter au panier</button>
+        </div>
 
-      <div class="card"><img src="assets/images/DBZ.jpg"> 
-        <button class="btn">$55.99</button>
+        <div class="product-card">
+            <span class="best-seller">Populaires</span>
+            <div class="product-image">
+                <img src="./assets/images/Dandadan.jpg" alt="Dandadan">
+                <button class="favorite-btn">♡</button>
+            </div>
+            <h3 class="product-title">Dandadan</h3>
+            <button class="add-to-cart">ajouter au panier</button>
+        </div>
+
+        <div class="product-card">
+            <span class="best-seller">Populaires</span>
+            <div class="product-image">
+                <img src="./assets/images/Kuroko no Basket.jpg" alt="Kuroko no Basket">
+                <button class="favorite-btn">♡</button>
+            </div>
+            <h3 class="product-title">Kuroko no Basket</h3>
+            <button class="add-to-cart">ajouter au panier</button>
+        </div>
     </div>
+</section>
+
+<!-- Section Nouveautés -->
+<section class="section">
+    <button class="btn-titre-class">Nouveautés</button>
+    <div class="card-container">
+        <!-- Cards -->
+        <div class="product-card">
+            <span class="best-seller">Nouveautés</span>
+            <div class="product-image">
+                <img src="./assets/images/Gachiakuta.png" alt="Gachiakuta">
+                <button class="favorite-btn">♡</button>
+            </div>
+            <h3 class="product-title">Gachiakuta</h3>
+            <button class="add-to-cart">ajouter au panier</button>
+        </div>
+
+        <div class="product-card">
+            <span class="best-seller">Nouveautés</span>
+            <div class="product-image">
+                <img src="./assets/images/Kagurabachi.jpg" alt="Kagurabachi">
+                <button class="favorite-btn">♡</button>
+            </div>
+            <h3 class="product-title">Kagurabachi</h3>
+            <button class="add-to-cart">ajouter au panier</button>
+        </div>
+
+        <div class="product-card">
+            <span class="best-seller">Nouveautés</span>
+            <div class="product-image">
+                <img src="./assets/images/JJK.jpg" alt="JJK">
+                <button class="favorite-btn">♡</button>
+            </div>
+            <h3 class="product-title">Jujutsu Kaisen</h3>
+            <button class="add-to-cart">ajouter au panier</button>
+        </div>
+
+        <div class="product-card">
+            <span class="best-seller">Nouveautés</span>
+            <div class="product-image">
+                <img src="./assets/images/Sakamoto Days.jpg" alt="Sakamoto Days">
+                <button class="favorite-btn">♡</button>
+            </div>
+            <h3 class="product-title">Sakamoto Days</h3>
+            <button class="add-to-cart">ajouter au panier</button>
+        </div>
     </div>
-  </section>
+</section>
+
+<!-- Section Dernières Sorties -->
+<section class="section">
+    <button class="btn-titre-class">Dernières Sorties</button>
+    <div class="card-container">
+        <!-- Cards -->
+        <div class="product-card">
+            <span class="best-seller">Dernières Sorties</span>
+            <div class="product-image">
+                <img src="./assets/images/Berserk.jpg" alt="Berserk">
+                <button class="favorite-btn">♡</button>
+            </div>
+            <h3 class="product-title">Berserk</h3>
+            <button class="add-to-cart">ajouter au panier</button>
+        </div>
+
+        <div class="product-card">
+            <span class="best-seller">Dernières Sorties</span>
+            <div class="product-image">
+                <img src="./assets/images/HxH.jpg" alt="HxH">
+                <button class="favorite-btn">♡</button>
+            </div>
+            <h3 class="product-title">Hunter x Hunter</h3>
+            <button class="add-to-cart">ajouter au panier</button>
+        </div>
+
+        <div class="product-card">
+            <span class="best-seller">Dernières Sorties</span>
+            <div class="product-image">
+                <img src="./assets/images/Tokyo Ghoul.jpg" alt="Tokyo Ghoul">
+                <button class="favorite-btn">♡</button>
+            </div>
+            <h3 class="product-title">Tokyo Ghoul</h3>
+            <button class="add-to-cart">ajouter au panier</button>
+        </div>
+
+        <div class="product-card">
+            <span class="best-seller">Dernières Sorties</span>
+            <div class="product-image">
+                <img src="./assets/images/Demon Slayer.png" alt="Demon Slayer">
+                <button class="favorite-btn">♡</button>
+            </div>
+            <h3 class="product-title">Demon Slayer</h3>
+            <button class="add-to-cart">ajouter au panier</button>
+        </div>
+    </div>
+</section>
+
+<!-- Section Classiques -->
+<section class="section">
+    <button class="btn-titre-class">Classiques</button>
+    <div class="card-container">
+        <!-- Cards -->
+        <div class="product-card">
+            <span class="best-seller">Classiques</span>
+            <div class="product-image">
+                <img src="./assets/images/Death Note.jpg" alt="Death Note">
+                <button class="favorite-btn">♡</button>
+            </div>
+            <h3 class="product-title">Death Note</h3>
+            <button class="add-to-cart">ajouter au panier</button>
+        </div>
+
+        <div class="product-card">
+            <span class="best-seller">Classiques</span>
+            <div class="product-image">
+                <img src="./assets/images/DBZ.jpg" alt="DBZ">
+                <button class="favorite-btn">♡</button>
+            </div>
+            <h3 class="product-title">Dragon Ball</h3>
+            <button class="add-to-cart">ajouter au panier</button>
+        </div>
+
+        <div class="product-card">
+            <span class="best-seller">Classiques</span>
+            <div class="product-image">
+                <img src="./assets/images/Naruto.jpg" alt="Naruto">
+                <button class="favorite-btn">♡</button>
+            </div>
+            <h3 class="product-title">Naruto</h3>
+            <button class="add-to-cart">ajouter au panier</button>
+        </div>
+
+        <div class="product-card">
+            <span class="best-seller">Classiques</span>
+            <div class="product-image">
+                <img src="./assets/images/OnePiece.jpg" alt="One Piece">
+                <button class="favorite-btn">♡</button>
+            </div>
+            <h3 class="product-title">One Piece</h3>
+            <button class="add-to-cart">ajouter au panier</button>
+        </div>
+    </div>
+</section>
+
+<!-- Section Découvertes -->
+<section class="section">
+    <button class="btn-titre-class">Découvertes</button>
+    <div class="card-container">
+        <!-- Cards -->
+        <div class="product-card">
+            <span class="best-seller">Découvertes</span>
+            <div class="product-image">
+                <img src="./assets/images/Food Wars.jpg" alt="Food Wars">
+                <button class="favorite-btn">♡</button>
+            </div>
+            <h3 class="product-title">Food Wars</h3>
+            <button class="add-to-cart">ajouter au panier</button>
+        </div>
+
+        <div class="product-card">
+            <span class="best-seller">Découvertes</span>
+            <div class="product-image">
+                <img src="./assets/images/Carnets de l'Apoticaire.jpg" alt="Carnets de l'Apoticaire">
+                <button class="favorite-btn">♡</button>
+            </div>
+            <h3 class="product-title">Les Carnets de l'Apoticaire</h3>
+            <button class="add-to-cart">ajouter au panier</button>
+        </div>
+
+        <div class="product-card">
+            <span class="best-seller">Découvertes</span>
+            <div class="product-image">
+                <img src="./assets/images/Spy x Family.jpg" alt="Spy x Family">
+                <button class="favorite-btn">♡</button>
+            </div>
+            <h3 class="product-title">Spy x Family</h3>
+            <button class="add-to-cart">ajouter au panier</button>
+        </div>
+
+        <div class="product-card">
+            <span class="best-seller">Découvertes</span>
+            <div class="product-image">
+                <img src="./assets/images/Kaguya Sama.jpg" alt="Kaguya Sama">
+                <button class="favorite-btn">♡</button>
+            </div>
+            <h3 class="product-title">Kaguya-Sama : Love is War</h3>
+            <button class="add-to-cart">ajouter au panier</button>
+        </div>
+    </div>
+</section>
+
 
   <!-- Footer -->
   <footer>
   <p>©2025 MangaBox – Tous droits réservés</p>
-  <div class="footer-links">
-    <a href="index.html">Accueil</a> | 
-    <a href="pages/catalogue.html">Catalogue</a> |
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="pages/catalogue.html">Catalogue</a>
     <a href="pages/panier.html">Panier</a>
-  </div>
+  </nav>
 </footer>
-
-
 </body>
 </html>
