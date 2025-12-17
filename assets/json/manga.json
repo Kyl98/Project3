@@ -1,0 +1,37 @@
+[   
+
+ {
+        "title": "Hellsing",
+        "authors": ["Kohta Hirano"],
+        "publisher": "Dark Horse Comics",
+        "publishedDate": "2003",
+        "description": "Chronicles the exploits of the secret Hellsing Organization, formed by the Hellsing family to protect England and the Protestant church from vampires and other monsters, and its top operative, the vampire Alucard.",
+        "industryIdentifiers": [
+          { "type": "ISBN_13", "identifier": "9781593070564" },
+          { "type": "ISBN_10", "identifier": "159307056X" }
+        ],
+        "readingModes": { "text": false, "image": true },
+        "pageCount": 210,
+        "printType": "BOOK",
+       "categories": ["manga"],
+        "averageRating": 5,
+        "ratingsCount": 1,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "1.0.0.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": true,
+          "imageBubbleVersion": "6ac2326c69d0521c_A"
+        },
+        "comicsContent": true,
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=NkkBDAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=NkkBDAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.fr/books?id=NkkBDAAAQBAJ&printsec=frontcover&dq=subject:manga&hl=&as_pt=BOOKS&cd=1&source=gbs_api",
+        "infoLink": "http://books.google.fr/books?id=NkkBDAAAQBAJ&dq=subject:manga&hl=&as_pt=BOOKS&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Hellsing.html?hl=&id=NkkBDAAAQBAJ"
+      }
+]
