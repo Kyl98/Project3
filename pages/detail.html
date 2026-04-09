@@ -26,7 +26,7 @@
     </div>
   </header>
 
-  <main>
+  <main class="contenu-page">
     <section class="titre-page">
       <h1>DETAILS</h1>
 
@@ -80,11 +80,26 @@
           </ul>
         </div>
 
+         <div class="details-plage">
+         <h3>Choisir une plage de tomes :</h3>
+
+         <h4>Dù</h4> <h4>Au</h4>
+        </div>
+
+     
+     
+        
+        <div class="range-selector">
+          
+          <button type="button" class="qty-btn minus">−</button>
+        <input type="number" class="qty-input" value="6" min="1" />
+         <button type="button" class="qty-btn plus">+</button>
+        </div>
 
         <div class="range-selector">
-        <h3>Choisir une plage de tomes :</h3>
-        <label>Du <input type="number" min="1" max="999" value="1" id="start-tome"></label>
-        <label>au <input type="number" min="1" max="999" value="5" id="end-tome"></label>
+          <button type="button" class="qty-btn minus">−</button>
+        <input type="number" class="qty-input" value="6" min="1" />
+         <button type="button" class="qty-btn plus">+</button>
         </div>
 
         <div class="purchase-box">
@@ -109,6 +124,8 @@
       <a href="./panier.html">Panier</a>
     </nav>
   </footer>
+
+<script src="../assets/js/script.js"></script>
 
 
 </body>

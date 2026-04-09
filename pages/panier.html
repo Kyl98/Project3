@@ -24,7 +24,7 @@
     </div>
   </header>
 
-  <main>
+  <main class="contenu-page">
     <section class="titre-page">
       <h1>PANIER</h1>
       </section>
@@ -39,9 +39,7 @@
             <p>Shōnen • 12 tomes dispo</p>
             <p class="price">5,99 € / tome</p>
             <div class="actions">
-              <button>-</button>
-              <span>1</span>
-              <button>+</button>
+              <button>+ Ajouter Tome</button>
               <a href="#" class="delete">Supprimer</a>
             </div>
           </div>
@@ -52,12 +50,10 @@
           <img src="../assets/images/Eminence_in_Shadow_1.jpg" alt="Eminence in Shadow" />
           <div class="cart-info">
             <h3>Eminence in Shadow</h3>
-            <p>Shōnen • 20 tomes dispo</p>
+            <p>Isekai • 7 tomes dispo</p>
             <p class="price">6,99 € / tome</p>
             <div class="actions">
-              <button>-</button>
-              <span>1</span>
-              <button>+</button>
+              <button>+ Ajouter Tome</button>
               <a href="#" class="delete">Supprimer</a>
             </div>
           </div>
@@ -70,9 +66,36 @@
             <p>Shōnen • 15 tomes dispo</p>
             <p class="price">9,99 € / tome</p>
             <div class="actions">
-              <button>-</button>
-              <span>1</span>
-              <button>+</button>
+              <button>+ Ajouter Tome</button>
+              <a href="#" class="delete">Supprimer</a>
+            </div>
+          </div>
+        </div>
+
+
+
+          <div class="cart-item">
+          <img src="../assets/images/Naruto.jpg" alt="Naruto" />
+          <div class="cart-info">
+            <h3>Naruto</h3>
+            <p>Shōnen • 40 tomes dispo</p>
+            <p class="price">7,99 € / tome</p>
+            <div class="actions">
+              <button>+ Ajouter Tome</button>
+              <a href="#" class="delete">Supprimer</a>
+            </div>
+          </div>
+        </div>
+
+
+          <div class="cart-item">
+          <img src="../assets/images/Tokyo_Ghoul.jpg" alt="Tokyo_Ghoul" />
+          <div class="cart-info">
+            <h3>Tokyo Ghoul</h3>
+            <p>Shōnen • 15 tomes dispo</p>
+            <p class="price">4,99 € / tome</p>
+            <div class="actions">
+              <button>+ Ajouter Tome</button>
               <a href="#" class="delete">Supprimer</a>
             </div>
           </div>
@@ -80,15 +103,42 @@
 
 
         <div class="cart-item">
+          <img src="../assets/images/HxH.jpg" alt="Hunter X Hunter" />
+          <div class="cart-info">
+            <h3>Hunter X Hunter</h3>
+            <p>Shōnen • 30 tomes dispo</p>
+            <p class="price">5,99 € / tome</p>
+            <div class="actions">
+              <button>+ Ajouter Tome</button>
+              <a href="#" class="delete">Supprimer</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="cart-item">
+          <img src="../assets/images/Demon_Slayer.png" alt="Demon_Slayer" />
+          <div class="cart-info">
+            <h3>Demon Slayer</h3>
+            <p>Shōnen • 21 tomes dispo</p>
+            <p class="price">7,99 € / tome</p>
+            <div class="actions">
+              <button>+ Ajouter Tome</button>
+              <a href="#" class="delete">Supprimer</a>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="cart-item">
           <img src="../assets/images/MHA.jpg" alt="My Hero Academia" />
           <div class="cart-info">
             <h3>My Hero Academia</h3>
-            <p>Isekai • 20 tomes dispo</p>
+            <p>Shōnen • 20 tomes dispo</p>
             <p class="price">9,99 € / tome</p>
             <div class="actions">
-              <button>-</button>
-              <span>1</span>
-              <button>+</button>
+              <button>+ Ajouter Tome</button>
               <a href="#" class="delete">Supprimer</a>
             </div>
           </div>
@@ -98,22 +148,33 @@
       <!-- Résumé commande -->
       <aside class="cart-summary">
         <h2>Résumé de la commande</h2>
-        <div class="summary-line">
-          <span>Articles :</span><span>4</span>
-        </div>
-        <div class="summary-line">
-          <span>Total HT :</span><span>32,96 €</span>
-        </div>
-        <div class="summary-line">
-          <span>TVA :</span><span>1,99 €</span>
-        </div>
-        <div class="summary-total">
-          <span>Total TTC :</span><span>34,95 €</span>
-        </div>
-        <a href="formulaire.html"><button class="checkout">Passer la commande</button></a>
-      </aside>
-    </div>
-  </main>
+
+  <ul class="summary-list">
+    <li><span>Detective Conan x1</span><span>5,99 €</span></li>
+    <li><span>Eminence in Shadow x1</span><span>6,99 €</span></li>
+    <li><span>Jojo's Bizarre Adventure x1</span><span>9,99 €</span></li>
+    <li><span>Naruto x1</span><span>7,99 €</span></li>
+    <li><span>Tokyo Ghoul x1</span><span>4,99 €</span></li>
+    <li><span>Hunter X Hunter x1</span><span>5,99 €</span></li>
+    <li><span>Demon Slayer x1</span><span>7,99 €</span></li>
+    <li><span>My Hero Academia x1</span><span>9,99 €</span></li>
+
+<hr>
+
+<ul class="resume-list">
+    <li><span>Articles</span><span>8</span></li>
+    <li><span>TVA</span><span>1,00 €</span></li>
+    <li><span>Total HT</span><span>59,92 €</span></li>
+    </ul>
+    
+    <li class="summary-total"><span>Total TTC</span><span>60,92 €</span></li>
+  </ul>
+
+  <a href="formulaire.html" class="checkout">Passer la commande</a>
+</aside>
+  </div>
+</main>
+
 
    <!-- Footer -->
   <footer>
@@ -124,7 +185,5 @@
       <a href="./panier.html">Panier</a>
     </nav>
   </footer>
-
-
 </body>
 </html>

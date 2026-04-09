@@ -1,9 +1,10 @@
 body {
   font-family: Arial, sans-serif;
-  background: #fff;
-  color: #222;
   margin: 0;
-    padding: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 h2 {
@@ -56,6 +57,40 @@ header {
   font-size: 20px;
 }
 
+.contenu-page {
+  flex: 1;
+}
+
+/* FOOTER */
+footer {
+    width: 100%;                 /* prend toute la largeur */
+    background: #000;
+    color: #fff;
+    padding: 20px 30px;
+    margin-top: 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;             /* évite les débordements sur petits écrans */
+}
+
+/* Texte du footer */
+footer p {
+    margin: 0;
+}
+
+/* Liens dans une nav ou une div .footer-links */
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
 /* =================================================================================================================================================================================
   ACCUEIL   ACCUEIL    ACCUEIL    ACCUEIL    ACCUEIL     ACCUEIL     ACCEUIL     ACCUEIL      ACCUEIL     ACCUEIL     ACCUEIL      ACCUEIL      ACCUEIL     ACCUEIL      ACCUEIL  
 ===================================================================================================================================================================================== */
@@ -75,48 +110,79 @@ header {
 }
 
 /* Bannière sous titre */
-
-.banner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #b3aeae;        
-  color: #141313;             
-  padding: 50px 40px;
-  position: relative;
+.banner-container {
+    background-color: #5c5c5c;
+    padding: 40px 0;
+    overflow: hidden; /* Pour couper ce qui dépasse à cause de l'inclinaison */
+    color: white;
 }
 
-.banner-text {
-  max-width: 50%;         
+.banner-content {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
 }
 
-.banner-text h2 {
-  margin-bottom: 15px;
-  font-size: 35px;
-  line-height: 1.4;
+/* Le groupe d'images */
+.skew-wrapper {
+    display: flex;
+    gap: 10px;
 }
 
-.banner-img img {
-  max-width: 600px;        
-  border-radius: 5px;
+/* Chaque tuile inclinée */
+.skew-item {
+    width: 120px;
+    height: 300px;
+    overflow: hidden;
+    transform: skewX(-15deg); /* Inclinaison vers la gauche */
+    border: 2px solid rgba(255,255,255,0.1);
+    transition: width 0.3s ease; /* Petit effet bonus au survol */
 }
+
+.skew-item:hover {
+    width: 160px; /* S'élargit quand on passe la souris */
+}
+
+/* L'image à l'intérieur : on l'incline en sens inverse pour la remettre droite */
+.skew-item img {
+    width: 200%; /* Plus large pour compenser la découpe */
+    height: 100%;
+    object-fit: cover;
+    transform: skewX(15deg) translateX(-25%); /* Redresse l'image */
+}
+
+/* Partie texte à droite */
+.banner-promo {
+    flex: 1;
+    text-transform: uppercase;
+}
+
+.banner-promo h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.banner-promo p {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
 
 /* Bouton Nouveautés en bas à droite de la bannière*/
-.nouveautes {
-  position: absolute;
-  bottom: 10px;
-  right: 40px;
+.btn-nouveautes {
+    background: white;
+    color: black;
+    border: none;
+    padding: 10px 25px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-.nouveautes .btn {
-  padding: 8px 20px;
-  background: #fff;
-  color: #000;
-  font-weight: bold;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-}
+
 
 /* Sections Recherche*/
 .section {
@@ -299,35 +365,6 @@ input[type="text"] {
   font-weight: bold;
 }
 
-/* FOOTER */
-footer {
-    width: 100%;                 /* prend toute la largeur */
-    background: #000;
-    color: #fff;
-    padding: 20px 30px;
-    margin-top: 30px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;             /* évite les débordements sur petits écrans */
-}
-
-/* Texte du footer */
-footer p {
-    margin: 0;
-}
-
-/* Liens dans une nav ou une div .footer-links */
-footer a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
 
 
 /* ======================================================================================================================================================
@@ -463,14 +500,14 @@ CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE 
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 30px; 
+  gap: 30px;
 }
 
 
 .cart-list {
-  flex: 2;
-  display: flex;
-  flex-direction: column;
+   display: grid;
+  grid-auto-flow: column;        /* Remplit les colonnes */
+  grid-template-rows: repeat(4, auto); /* 5 cartes par colonne */
   gap: 15px;
 }
 
@@ -483,6 +520,10 @@ CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE 
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   align-items: center;
   transition: transform 0.2s;
+
+  width: 100%;
+  max-width: 600px;
+
 }
 
 .cart-item:hover {
@@ -532,6 +573,8 @@ CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE 
   border-radius: 4px;
   cursor: pointer;
   font-weight: bold;
+  color: #236cb0;
+  font-size: 0.9rem;
 }
 
 .actions button:hover {
@@ -542,6 +585,7 @@ CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE 
   color: #e63946;
   text-decoration: none;
   font-size: 0.9rem;
+  font-weight: bold;
 }
 
 /* ----- RÉSUMÉ COMMANDE ----- */
@@ -560,19 +604,33 @@ CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE 
   font-size: 1.2rem;
 }
 
-.summary-line, .summary-total {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
-  font-size: 0.95rem;
+
+
+.summary-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
 }
 
-.summary-total {
-  font-weight: bold;
-  color: #222;
-  border-top: 1px solid #ddd;
-  padding-top: 10px;
+.summary-list li {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
 }
+
+
+.resume-list {
+font-weight:bold;
+  }
+
+.summary-total {
+  font-weight: bolder;
+  color: #3046c5;
+  border-top: 1px solid #ddd;
+  padding-top: .8rem;
+  margin-top: .5rem;
+}
+
 
 .checkout {
   width: 100%;
@@ -584,6 +642,9 @@ CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE 
   border-radius: 5px;
   cursor: pointer;
   font-size: 1rem;
+  display: block;
+  text-align: center;
+  text-decoration: none;
 }
 
 .checkout:hover {
@@ -673,7 +734,7 @@ CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE 
 }
 
 .price {
-  color: #3046c5;
+  color:#4caf50;
   font-size: 1.2rem;
   font-weight: 600;
   margin: 15px 0;
@@ -708,8 +769,60 @@ CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE 
 /* ======= ACHAT ======== */
 
 /* Selecteur de tomes */
+
+.details-plage h3 {
+  color: #000;
+  margin-top: 12px;
+}
+
+
+
 .range-selector {
 margin-top: 25px;
+display: inline-flex;
+  align-items: center;
+  border: 2px solid #1e0ff1; /* jaune doux comme sur ta capture */
+  border-radius: 20px;
+  overflow: hidden;
+  width: max-content;
+  font-family: Arial, sans-serif;
+  margin-right: 100px;
+  margin-left: 20px;
+}
+
+.range-selector:last-child {
+  margin-right: 0;
+}
+
+.qty-btn {
+  background: none;
+  border: none;
+  color: #000000;
+  font-size: 1.5rem;
+  padding: 4px 12px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s;
+}
+
+.qty-btn:hover {
+  background-color: #777777;
+}
+
+.qty-input {
+  width: 36px;
+  border: none;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1rem;
+  outline: none;
+  -moz-appearance: textfield;
+}
+
+.qty-input::-webkit-inner-spin-button,
+.qty-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 /* Validation Panier */
@@ -843,6 +956,39 @@ input:focus, select:focus {
   border-bottom: none;
 }
 
+.cart-formulaire {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 12px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+    margin-bottom: 12px;  
+}
+
+.cart-formulaire img {
+   width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+
+.shadow {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.price-checkout {
+font-weight: 600;
+margin-top: 8px;
+white-space: nowrap;
+margin-left: 80px;
+color: #3f51b5;
+
+}
+
 .order-list {
   list-style: none;
   padding: 0;
@@ -868,9 +1014,30 @@ hr {
 }
 
 .total {
-  font-size: 18px;
-  color:#236cb0;
+  font-size: 16px;
   font-weight: bold;
+font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.checkout-panier {
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px;
+  color: rgb(93, 93, 93);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 500;
+  border-color: #666;
+  background: #e0e0e0;
+}
+
+.checkout-panier:hover {
+  background: #777777;
+  color: #e0e0e0;
 }
 
 

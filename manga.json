@@ -1,0 +1,107 @@
+{
+  "Astro_Boy": {
+    "titre": "Astro Boy",
+    "genre": "Shônen",
+    "prix": "2 € / semaine",
+    "description": "Astro Boy raconte l’histoire d’un robot doté d’émotions et d’un grand sens de la justice...",
+    "details": {
+      "auteur": "Osamu Tezuka",
+      "illustrateur": "Osamu Tezuka",
+      "editeur": "Kana",
+      "tomes": 10,
+      "statut": "Terminé"
+    },
+    "images": {
+      "principale": "../assets/images/Astro_Boy.jpg",
+      "miniatures": [
+        "../assets/images/Astro_Boy.jpg"
+      ]
+    }
+  },
+
+  "Attaque_des_Titans": {
+    "titre": "Attaque des Titans",
+    "genre": "Shônen",
+    "prix": "7 € / semaine",
+    "description": "Attaque des Titans suit Eren et ses amis dans un monde assiégé par des Titans, des créatures gigantesques dévorant l’humanité...",
+    "details": {
+      "auteur": "Hajime Isayama",
+      "illustrateur": "Hajime Isayama",
+      "editeur": "Pika Édition",
+      "tomes": 15,
+      "statut": "Terminé"
+    },
+    "images": {
+      "principale": "../assets/images/SNK.jpg",
+      "miniatures": [
+        "../assets/images/SNK.jpg"
+      ]
+    }
+  },
+
+  "Baki": {
+    "titre": "Baki",
+    "genre": "Shônen",
+    "prix": "6 € / semaine",
+    "description": "Baki raconte l’histoire de Baki Hanma, un jeune combattant cherchant à surpasser son père, l’homme le plus fort du monde...",
+    "details": {
+      "auteur": "Keisuke Itagaki",
+      "illustrateur": "Keisuke Itagaki",
+      "editeur": "Panini Manga",
+      "tomes": 12,
+      "statut": "En cours"
+    },
+    "images": {
+      "principale": "../assets/images/Baki26.jpg",
+      "miniatures": [
+        "../assets/images/Baki26.jpg"
+      ]
+    }
+  },
+
+  "Bleach": {
+    "titre": "Bleach",
+    "genre": "Shônen",
+    "prix": "5 € / semaine",
+    "description": "Bleach suit les aventures d’Ichigo Kurosaki, un adolescent capable de voir les fantômes et qui devient Shinigami pour protéger le monde des esprits malveillants...",
+    "details": {
+      "auteur": "Tite Kubo",
+      "illustrateur": "Tite Kubo",
+      "editeur": "Glénat",
+      "tomes": 6,
+      "statut": "Terminé"
+    },
+    "images": {
+      "principale": "../assets/images/Bleach.jpg",
+      "miniatures": [
+        "../assets/images/Bleach.jpg"
+      ]
+    }
+  },
+
+  "One_Punch_Man": {
+    "titre": "One Punch Man",
+    "genre": "Shōnen, Action, Combats, Comédie, Super-héros",
+    "prix": "8,00 € / tome",
+    "description": "One Punch Man raconte l’histoire de Saitama, un héros tellement puissant qu’il peut terrasser n’importe quel ennemi d’un seul coup de poing...",
+    "details": {
+      "auteur": "ONE",
+      "illustrateur": "Yūsuke Murata",
+      "editeur": "Kurokawa",
+      "tomes": 35,
+      "statut": "En cours"
+    },
+    "images": {
+      "principale": "../assets/images/OPM.jpg",
+      "miniatures": [
+        "../assets/images/OPM2.jpg",
+        "../assets/images/OPM3.jpg",
+        "../assets/images/OPM7.jpg",
+        "../assets/images/OPM9.jpg",
+        "../assets/images/OPM13.jpg",
+        "../assets/images/OPM28.jpg",
+        "../assets/images/OPM30.jpg"
+      ]
+    }
+  }
+}
