@@ -9,22 +9,26 @@
 </head>
 <body>
 
- <!-- Header -->
-  <header>
-    <div class="navbar">
-      <div class="logo"><img src="./assets/images/Logo_MangaBox-removebg-preview.png"></div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="pages/catalogue.html">Catalogue</a></li>
-          <li><a href="pages/panier.html">Panier</a></li>
-          <li><a href="pages/panier.html">Compte</a></li>
-
-        </ul>
-      </nav>
-       <div class="espace de mise en forme"> </div>
+ <header>
+  <div class="navbar">
+    <div class="logo">
+      <img src="./assets/images/Logo_MangaBox-removebg-preview.png" alt="Logo MangaBox">
     </div>
-  </header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="pages/catalogue.html">Catalogue</a></li>
+        <li><a href="pages/panier.html">Panier</a></li>
+        <li>
+          <a href="pages/compte.html">
+            <img src="./assets/images/utilisateur.png" alt="Mon Compte" style="width: 25px; height: auto;">
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="espace-de-mise-en-forme"> </div>
+  </div>
+</header>
 
   <!-- Bannière -->
   <section class="banner-titre">
@@ -40,7 +44,7 @@
             <div class="skew-item"><img src="./assets/images/Dr_Stone/Dr_Stone7.jpg" alt="Manga 1"></div>
             <div class="skew-item"><img src="./assets/images/Blue_Lock/BlueLock12.jpg" alt="Manga 2"></div>
             <div class="skew-item"><img src="./assets/images/Carnets_d'Apoticaire/Carnets14.jpg" alt="Manga 3"></div>
-            <div class="skew-item"><img src="./assets/images/One_Piece/OnePiece87.jpg" alt="Manga 4"></div>
+            <div class="skew-item"><img src="./assets/images/Seven_Deadly_Sins/7DS29.jpg" alt="Manga 4"></div>
             <div class="skew-item"><img src="./assets/images/Death_Note/Death_Note13.jpg" alt="Manga 5"></div>
             <div class="skew-item"><img src="./assets/images/Jujutsu_Kaisen/JJK30.jpg" alt="Manag 6"></div>
             <div class="skew-item"><img src="./assets/images/Kagurabachi/Kagurabachi.jpg" alt="Manga 7"></div>
@@ -48,7 +52,7 @@
 
         <div class="banner-promo">
             <h2>NOUVEAUX AJOUTS</h2>
-            <p>Découvrez un univers de mangas <3<br>
+            <p>Découvrez un univers de mangas <3<br><br>
             Louez vos mangas favoris à la demande !</p>
             <button class="btn-nouveautes">Nouveautés</button>
         </div>
@@ -56,148 +60,272 @@
 </section>
 
 
-  <!-- Section Populaires -->
-  <section class="section">
-    <div class="section-header">
-      <button class="btn-titre">Populaires</button>
-      <div class="filters">
-        <input type="text-catalogue" placeholder="Rechercher un manga...">
-        <select>
-          <option>Tous les genres</option>
-          <option>Kodomo</option>
-          <option>Shônen</option>
-          <option>Shôjo</option>
-          <option>Seinen</option>
-          <option>Josei</option>
-          <option>Isekai</option>
-          <option>Mecha</option>
-          <option>Slice of Life</option>
-        </select>
+<section class="trending-row">
+  <div class="row-header">
+    <h2>🔥 TENDANCES DU MOMENT</h2>
+    <div class="nav-arrows">
+      <span>←</span>
+      <span>→</span>
+    </div>
+  </div>
 
-        <select>
-          <option>Catégories</option>
-          <option>Combats</option>
-          <option>Sport</option>
-          <option>Action</option>
-          <option>Jeux</option>
-          <option>Voyage</option>
-          <option>Musique</option>
-          <option>Horreur/Gore</option>
-          <option>Romance</option>
-          <option>Policier</option>
-          <option>Comédies</option>
-          <option>Gastronomie</option>
-          <option>Surnaturels</option>
-          <option>Science-Fiction</option>
-          <option>Psycologique</option>
-          <option>Survival Game</option>
-          <option>Ecole</option>
-          <option>Fantasy</option>
-          <option>Mafia/Gang</option>
-          <option>Surnaturels</option>
-        </select>
+  <div class="manga-grid-trending">
+    
+    <div class="anime-card">
+      <div class="card-image">
+        <img src="./assets/images/Dandadan/Dandadan6.jpg" alt="Dandadan">
+        <div class="card-badges">
+          <span class="badge-type">Manga</span>
+          <span class="badge-lang">🇯🇵</span>
+        </div>
       </div>
-     
+      <div class="card-info">
+        <h3>DANDADAN</h3>
+        <div class="status-box">
+          <span class="icon">📖</span>
+          <span class="status-text">Tome 12 disponible</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="anime-card">
+      <div class="card-image">
+        <img src="./assets/images/Hellsing/Hellsing5.jpg" alt="Hellsing">
+        <div class="card-badges">
+          <span class="badge-type">Manga</span>
+          <span class="badge-lang">🇯🇵</span>
+        </div>
+      </div>
+      <div class="card-info">
+        <h3>Hellsing</h3>
+        <div class="status-box">
+          <span class="icon">📖</span>
+          <span class="status-text">Tome 15 disponible</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="anime-card">
+      <div class="card-image">
+        <img src="./assets/images/One_Piece/OnePiece57.jpg" alt="One Piece">
+        <div class="card-badges">
+          <span class="badge-type">Manga</span>
+          <span class="badge-lang">🇯🇵</span>
+        </div>
+      </div>
+      <div class="card-info">
+        <h3>One Piece</h3>
+        <div class="status-box">
+          <span class="icon">📖</span>
+          <span class="status-text">Tome 30 disponible</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="anime-card">
+      <div class="card-image">
+        <img src="./assets/images/My Hero Academia/MHA.jpg" alt="MHA">
+        <div class="card-badges">
+          <span class="badge-type">Manga</span>
+          <span class="badge-lang">🇯🇵</span>
+        </div>
+      </div>
+      <div class="card-info">
+        <h3>My Hero Academia</h3>
+        <div class="status-box">
+          <span class="icon">📖</span>
+          <span class="status-text">Tome 50 disponible</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="anime-card">
+      <div class="card-image">
+        <img src="./assets/images/Food_Wars/Food_Wars.jpg" alt="Food Wars">
+        <div class="card-badges">
+          <span class="badge-type">Manga</span>
+          <span class="badge-lang">🇯🇵</span>
+        </div>
+      </div>
+      <div class="card-info">
+        <h3>Food Wars</h3>
+        <div class="status-box">
+          <span class="icon">📖</span>
+          <span class="status-text">Tome 33 disponible</span>
+        </div>
+      </div>
     </div>
 
 
-    <!---- Cartes (Conteneur) ---->
-     <div class="card-container">
-        <!-- Populaires Cards -->
-        <div class="product-card">
-            <span class="best-seller">Populaires</span>
-            <div class="product-image">
-                <img src="./assets/images/Frieren.jpg" alt="Frieren">
-                <button class="favorite-btn">♡</button>
+
+
+    <div class="anime-card">
+      <div class="card-image">
+        <img src="./assets/images/Naruto/Naruto67.jpg" alt="Naruto">
+        <div class="card-badges">
+          <span class="badge-type">Manga</span>
+          <span class="badge-lang">🇯🇵</span>
+        </div>
+      </div>
+      <div class="card-info">
+        <h3>Naruto</h3>
+        <div class="status-box">
+          <span class="icon">📖</span>
+          <span class="status-text">Tome 70 disponibles</span>
+        </div>
+      </div>
+    </div>
+
+  </div> 
+</section>
+    
+
+
+
+<section class="reassurance-section">
+    <div class="reassurance-container">
+        <div class="reassurance-item">
+            <div class="reassurance-icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/709/709790.png" alt="Livraison">
             </div>
-            <h3 class="product-title">Frieren</h3>
-            <button class="add-to-cart">ajouter au panier</button>
+            <h4>Livraison à domicile</h4>
+            <p>Vos mangas préférés déposés directement dans votre boîte aux lettres.</p>
         </div>
 
-        <div class="product-card">
-            <span class="best-seller">Populaires</span>
-            <div class="product-image">
-                <img src="./assets/images/Blue_Lock19.jpg" alt="Blue Lock">
-                <button class="favorite-btn">♡</button>
+        <div class="reassurance-item">
+            <div class="reassurance-icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/3652/3652191.png" alt="Flexibilité">
             </div>
-            <h3 class="product-title">Blue Lock</h3>
-            <button class="add-to-cart">ajouter au panier</button>
+            <h4>Location flexible</h4>
+            <p>Gardez-les 15 ou 30 jours, lisez à votre rythme sans pression.</p>
         </div>
 
-        <div class="product-card">
-            <span class="best-seller">Populaires</span>
-            <div class="product-image">
-                <img src="./assets/images/Dandadan.jpg" alt="Dandadan">
-                <button class="favorite-btn">♡</button>
+        <div class="reassurance-item">
+            <div class="reassurance-icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/3144/3144456.png" alt="Prix">
             </div>
-            <h3 class="product-title">Dandadan</h3>
-            <button class="add-to-cart">ajouter au panier</button>
+            <h4>Moins cher que l'achat</h4>
+            <p>Accédez à des séries complètes pour une fraction du prix du neuf.</p>
         </div>
 
-        <div class="product-card">
-            <span class="best-seller">Populaires</span>
-            <div class="product-image">
-                <img src="./assets/images/Kuroko_no_Basket.jpg" alt="Kuroko no Basket">
-                <button class="favorite-btn">♡</button>
+        <div class="reassurance-item">
+            <div class="reassurance-icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/6591/6591017.png" alt="Retour">
             </div>
-            <h3 class="product-title">Kuroko no Basket</h3>
-            <button class="add-to-cart">ajouter au panier</button>
+            <h4>Retour simplifié</h4>
+            <p>Une enveloppe pré-affranchie fournie pour renvoyer vos tomes facilement.</p>
         </div>
     </div>
 </section>
 
-<!-- Section Nouveautés -->
-<section class="section">
-    <button class="btn-titre-class">Nouveautés</button>
-    <div class="card-container">
-        <!-- Cards -->
-        <div class="product-card">
-            <span class="best-seller">Nouveautés</span>
-            <div class="product-image">
-                <img src="./assets/images/Gachiakuta.png" alt="Gachiakuta">
-                <button class="favorite-btn">♡</button>
+
+
+
+<section class="cat-section">
+    <div class="cat-header">
+        <h2>Explorez nos univers</h2>
+        <p>Louez par genre, par style ou par thématique</p>
+    </div>
+
+    <div class="cat-grid">
+        <div class="cat-card">
+            <div class="cat-icon-wrapper">
+                <img src="https://cdn-icons-png.flaticon.com/512/3593/3593461.png" alt="Shonen">
             </div>
-            <h3 class="product-title">Gachiakuta</h3>
-            <button class="add-to-cart">ajouter au panier</button>
+            <h3>Univers Shônen</h3>
+            <ul class="cat-links">
+                <li><a href="#">Nekketsu & Combat</a></li>
+                <li><a href="#">Sport & Dépassement</a></li>
+                <li><a href="#">Comédie & École</a></li>
+            </ul>
         </div>
 
-        <div class="product-card">
-            <span class="best-seller">Nouveautés</span>
-            <div class="product-image">
-                <img src="./assets/images/Kagurabachi.jpg" alt="Kagurabachi">
-                <button class="favorite-btn">♡</button>
+        <div class="cat-card">
+            <div class="cat-icon-wrapper">
+                <img src="https://cdn-icons-png.flaticon.com/512/10121/10121013.png" alt="Seinen">
             </div>
-            <h3 class="product-title">Kagurabachi</h3>
-            <button class="add-to-cart">ajouter au panier</button>
+            <h3>Univers Seinen</h3>
+            <ul class="cat-links">
+                <li><a href="#">Dark Fantasy</a></li>
+                <li><a href="#">Thriller & Psychologie</a></li>
+                <li><a href="#">Historique & Guerre</a></li>
+            </ul>
         </div>
 
-        <div class="product-card">
-            <span class="best-seller">Nouveautés</span>
-            <div class="product-image">
-                <img src="./assets/images/JJK.jpg" alt="JJK">
-                <button class="favorite-btn">♡</button>
+        <div class="cat-card">
+            <div class="cat-icon-wrapper">
+                <img src="https://cdn-icons-png.flaticon.com/512/10307/10307920.png" alt="Shojo">
             </div>
-            <h3 class="product-title">Jujutsu Kaisen</h3>
-            <button class="add-to-cart">ajouter au panier</button>
+            <h3>Shôjo & Josei</h3>
+            <ul class="cat-links">
+                <li><a href="#">Romance & Drame</a></li>
+                <li><a href="#">Tranches de vie</a></li>
+                <li><a href="#">Magical Girl</a></li>
+            </ul>
         </div>
 
-        <div class="product-card">
-            <span class="best-seller">Nouveautés</span>
-            <div class="product-image">
-                <img src="./assets/images/Sakamoto_Days.jpg" alt="Sakamoto Days">
-                <button class="favorite-btn">♡</button>
+        <div class="cat-card">
+            <div class="cat-icon-wrapper">
+                <img src="https://cdn-icons-png.flaticon.com/512/11550/11550220.png" alt="Fantasy">
             </div>
-            <h3 class="product-title">Sakamoto Days</h3>
-            <button class="add-to-cart">ajouter au panier</button>
+            <h3>Fantasy & Isekai</h3>
+            <ul class="cat-links">
+                <li><a href="#">Réincarnation</a></li>
+                <li><a href="#">RPG & Gaming</a></li>
+                <li><a href="#">Mythologie</a></li>
+            </ul>
         </div>
+
+        <div class="cat-card">
+            <div class="cat-icon-wrapper">
+                <img src="https://cdn-icons-png.flaticon.com/512/10609/10609653.png" alt="SF">
+            </div>
+            <h3>Science-Fiction</h3>
+            <ul class="cat-links">
+                <li><a href="#">Cyberpunk & Mecha</a></li>
+                <li><a href="#">Post-apocalyptique</a></li>
+                <li><a href="#">Espace & Aliens</a></li>
+            </ul>
+        </div>
+
+        <div class="cat-card highlight">
+            <div class="cat-icon-wrapper">
+                <img src="https://cdn-icons-png.flaticon.com/512/3502/3502688.png" alt="Aide">
+            </div>
+            <h3>MangaBox Direct</h3>
+            <ul class="cat-links">
+                <li><a href="#">Comment ça marche ?</a></li>
+                <li><a href="#">Abonnements Illimités</a></li>
+                <li><a href="#">Offrir un pack</a></li>
+            </ul>
+        </div>
+    </div>
 </section>
 
+
+<section class="quality-section">
+    <div class="quality-container">
+        <div class="quality-image">
+            <img src="./assets/images/presentation5.jpg" alt="Contrôle qualité MangaBox">
+        </div>
+        <div class="quality-info">
+            <span class="tag">EXIGENCE MANGABOX</span>
+            <h2>Une qualité "Comme Neuf", toujours.</h2>
+            <p>Parce qu'on sait qu'un fan de manga est exigeant, chaque tome loué passe entre nos mains :</p>
+            <ul class="quality-list">
+                <li><strong>Inspection manuelle :</strong> Zéro page cornée ou tachée.</li>
+                <li><strong>Protection Premium :</strong> Tous nos mangas sont plastifiés.</li>
+                <li><strong>Hygiène garantie :</strong> Nettoyage systématique entre deux lecteurs.</li>
+            </ul>
+        </div>
+    </div>
+</section>
 
 
 
   <!-- Footer -->
   <footer>
-  <p>©2025 MangaBox – Tous droits réservés</p>
+  <p>©2026 MangaBox – Tous droits réservés</p>
   <nav>
     <a href="index.html">Accueil</a>
     <a href="pages/catalogue.html">Catalogue</a>
