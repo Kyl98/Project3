@@ -1,48 +1,52 @@
-// Récupère le manga sélectionné dans l'URL
-function getMangaFromURL() {
-  const params = new URLSearchParams(window.location.search);
-  return params.get("manga");
-}
+// ================================================================================================================================================
+// CATALOGUE /// CATALOGUE /// CATALOGUE /// CATALOGUE /// CATALOGUE /// CATALOGUE /// CATALOGUE /// CATALOGUE /// CATALOGUE /// CATALOGUE ///
+// ================================================================================================================================================
 
-fetch("manga.json")
-  .then(response => response.json())
-  .then(data => {
-    const mangaID = getMangaFromURL();
-    if (!mangaID || !data[mangaID]) {
-      console.error("Manga non trouvé dans le JSON !");
-      return;
-    }
 
-    const manga = data[mangaID];
+// PAGINATION
+  const cardsPerPage = 16; // Nombre de mangas par page
+  const cards = Array.from(document.querySelectorAll('.card-catalogue'));
+  const pageButtons = document.querySelectorAll('.page-btn');
+  const prevBtn = document.getElementById('prev-btn');
+  const nextBtn = document.getElementById('next-btn');
+  
+  let currentPage = 1;
+  const totalPages = Math.ceil(cards.length / cardsPerPage);
 
-    // Remplissage des infos principales
-    document.querySelector(".product-info h2").textContent = manga.titre;
-    document.querySelector(".product-info .genre").textContent = "Genre : " + manga.genre;
-    document.querySelector(".product-info .price").textContent = manga.prix;
-    document.querySelector(".details-block p").innerHTML =
-      "<strong>" + manga.titre + "</strong> " + manga.description;
+  function showPage(page) {
+    if (page < 1) page = 1;
+    if (page > totalPages) page = totalPages;
+    currentPage = page;
 
-    // Détails produit
-    const detailsList = document.querySelectorAll(".details-block ul li");
-    detailsList[0].textContent = "Auteur : " + manga.details.auteur;
-    detailsList[1].textContent = "Illustrateur : " + manga.details.illustrateur;
-    detailsList[2].textContent = "Éditeur : " + manga.details.editeur;
-    detailsList[3].textContent = "Nombre de tomes disponibles : " + manga.details.tomes;
-    detailsList[4].textContent = "Statut : " + manga.details.statut;
+    // Calcul des index de début et de fin
+    const start = (page - 1) * cardsPerPage;
+    const end = start + cardsPerPage;
 
-    // Image principale
-    const mainImg = document.querySelector(".main-image img");
-    mainImg.src = manga.images.principale;
-    mainImg.alt = manga.titre;
-
-    // Miniatures
-    const thumbnails = document.querySelectorAll(".thumbnail-gallery img");
-    thumbnails.forEach((img, index) => {
-      if (manga.images.miniatures[index]) {
-        img.src = manga.images.miniatures[index];
-        img.alt = manga.titre + " mini" + (index + 1);
-      }
+    // Afficher/Masquer les cartes
+    cards.forEach((card, index) => {
+      card.style.display = (index >= start && index < end) ? 'block' : 'none';
     });
 
-  })
-  .catch(error => console.error("Erreur de chargement du JSON :", error));
+    // Mise à jour de l'apparence des boutons
+    pageButtons.forEach(btn => {
+      btn.classList.toggle('active', parseInt(btn.innerText) === currentPage);
+    });
+
+    // Gérer l'état des flèches
+    prevBtn.disabled = (currentPage === 1);
+    nextBtn.disabled = (currentPage === totalPages);
+  }
+
+  // Événements sur les numéros
+  pageButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      showPage(parseInt(btn.innerText));
+    });
+  });
+
+  // Événements sur les flèches
+  prevBtn.addEventListener('click', () => showPage(currentPage - 1));
+  nextBtn.addEventListener('click', () => showPage(currentPage + 1));
+
+  // Initialisation au chargement
+  showPage(1);
