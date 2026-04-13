@@ -50,3 +50,35 @@
 
   // Initialisation au chargement
   showPage(1);
+
+
+  // ==============================================================================================
+  // 
+  // ==============================================================================================
+
+// Image Principale
+function openZoom(src) {
+    const imgZoom = document.getElementById('img-zoom');
+    imgZoom.src = src;
+    imgZoom.classList.remove('zoomed'); // On réinitialise le zoom à l'ouverture
+    document.getElementById('lightbox').style.display = "block";
+}
+
+function closeZoom() {
+    document.getElementById('lightbox').style.display = "none";
+}
+
+function toggleImageZoom(event) {
+    // 1. Empêche la fermeture de la lightbox (on ne prévient pas le fond noir)
+    event.stopPropagation();
+    
+    // 2. Ajoute ou retire la classe de zoom
+    const img = event.target;
+    img.classList.toggle('zoomed');
+}
+
+
+// Images en minatures sur la ligne de défilement
+  function changeImage(src) {
+    document.getElementById('main-img').src = src;
+  }
