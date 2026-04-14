@@ -1,21 +1,26 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: Arial, sans-serif;
-  background: #fff;
-  color: #222;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
+
+h2 {
+  color: #333;
+  margin-bottom: 15px;
+  border-bottom: 2px;
+  padding-bottom: 8px;
+  margin-top: 15px;
+}
+
 
 /* Navbar */
 header {
   background: #fefefe;
   color: #070707;
-  padding: 25px 20px;
+  padding: 10px 30px;
 }
 
 .navbar {
@@ -40,7 +45,7 @@ header {
   list-style: none;
   display: flex;
   gap: 200px;
-  padding-left: 400px;
+  padding-left: 500px;
 }
 
 .navbar ul li a {
@@ -52,24 +57,52 @@ header {
   font-size: 20px;
 }
 
-/* Banner */
-.banner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #CFCFCF;
-  color: #fff;
-  padding: 20px;
+.contenu-page {
+  flex: 1;
 }
 
-/* ===== Titre Acceuil en Noir ======= */
+/* FOOTER */
+footer {
+    width: 100%;                 
+    background: #000;
+    color: #fff;
+    padding: 20px 30px;
+    margin-top: 30px;
 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Texte du footer */
+footer p {
+    margin: 0;
+}
+
+/* Liens dans une nav ou une div .footer-links */
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* =================================================================================================================================================================================
+  ACCUEIL   ACCUEIL    ACCUEIL    ACCUEIL    ACCUEIL     ACCUEIL     ACCEUIL     ACCUEIL      ACCUEIL     ACCUEIL     ACCUEIL      ACCUEIL      ACCUEIL     ACCUEIL      ACCUEIL  
+===================================================================================================================================================================================== */
+
+/* ==========================================================================
+   1. BANNIÈRE PRINCIPALE (HEADER & TITRE)
+   ========================================================================== */
 .banner-titre {
     background: #000;
     color: #fff;
     padding-bottom: 20px;
     padding-top: 20px;
-
 }
 
 .banner-titre h1 {
@@ -78,67 +111,96 @@ header {
     align-items: center;
 }
 
-/* Bannière */
-
-
-
-.banner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #b3aeae;        /* Fond noir */
-  color: #141313;             /* Texte blanc */
-  padding: 50px 40px;
-  position: relative;      /* Pour placer le bouton */
+/* ==========================================================================
+   2. BANNIÈRE VISUELLE (EFFET SKEW / INCLINÉ)
+   ========================================================================== */
+.banner-container {
+    background-color: #5c5c5c;  
+    padding: 40px 0;
+    overflow: hidden; /* Pour couper ce qui dépasse à cause de l'inclinaison */
+    color: white;
 }
 
-.banner-text {
-  max-width: 50%;          /* Le texte occupe la moitié gauche */
+.banner-content {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
 }
 
-.banner-text h2 {
-  margin-bottom: 15px;
-  font-size: 35px;
-  line-height: 1.4;
+/* Le groupe d'images */
+.skew-wrapper {
+    display: flex;
+    gap: 10px;
 }
 
-.banner-img img {
-  max-width: 600px;        /* Taille max de l’image à droite */
-  border-radius: 5px;
+/* Chaque tuile inclinée */
+.skew-item {
+    width: 120px;
+    height: 300px;
+    overflow: hidden;
+    transform: skewX(-15deg); /* Inclinaison vers la gauche */
+    border: 2px solid rgba(255,255,255,0.1);
+    transition: width 0.3s ease; /* Petit effet bonus au survol */
 }
 
-/* Bouton Nouveautés en bas à droite */
-.nouveautes {
-  position: absolute;
-  bottom: 10px;
-  right: 40px;
+.skew-item:hover {
+    width: 160px; /* S'élargit quand on passe la souris */
 }
 
-.nouveautes .btn {
-  padding: 8px 20px;
-  background: #fff;
-  color: #000;
-  font-weight: bold;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
+/* L'image à l'intérieur : on l'incline en sens inverse pour la remettre droite */
+.skew-item img {
+    width: 200%; /* Plus large pour compenser la découpe */
+    height: 100%;
+    object-fit: cover;
+    transform: skewX(15deg) translateX(-25%); /* Redresse l'image */
 }
 
-/* Sections */
-.section {
-  padding: 30px 20px;
+/* Partie texte à droite */
+.banner-promo {
+    flex: 1;
+    text-transform: uppercase;
+}
+
+.banner-promo h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.banner-promo p {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+/* Bouton Nouveautés */
+.btn-nouveautes {
+    background: white;
+    color: black;
+    border: none;
+    padding: 10px 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   3. SECTIONS RECHERCHE & FILTRES
+   ========================================================================== */
+.sectionpw {
+  padding: 40px 20px;
 }
 
 .section-header {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   gap: 15px;
   margin-bottom: 20px;
 }
 
 .section h3 {
- 
   border-color: #000;
 }
 
@@ -151,20 +213,25 @@ header {
   border-radius: 5px;
 }
 
-
 .btn-titre {
  background: #f7f6f6;
   color: #0a0a0a;
   cursor: pointer;
   border-radius: 5px;
-  padding: 8px 25px; 
-  margin-bottom: 15px;
+  padding: 8px 30px; 
+  margin-bottom: 2px;
+  flex: 0 0 auto;
 }
 
-.nouveautés {
-    margin-top: 400px;
+.btn-titre-class {
+ background: #f7f6f6;
+  color: #0a0a0a;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 8px 30px; 
+  margin-bottom: 30px;
+  flex: 0 0 auto;
 }
-
 
 input[type="text"] {
   padding: 8px;
@@ -174,56 +241,373 @@ input[type="text"] {
   padding: 8 25px;
 }
 
-/* Cards */
-.card-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 200px;
+/* ==========================================================================
+   4. TENDANCES DU MOMENT (STYLE ANIME-SAMA - SOUS FILTRAGE)
+   ========================================================================== */
+
+.trending-row {
+    background-color: #ffffff; 
+    padding: 20px 5% 40px 5%; /* Réduction du padding haut pour coller au filtrage */
+    display: flex;
+    flex-direction: column; /* Force le titre AU-DESSUS de la grille */
+    gap: 15px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.card:hover {
-    transform: scale(1.1, 1.1);
+.row-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #4d4d4d;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+}
+
+.row-header h3 {
+    font-size: 1.3rem;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.manga-grid-trending {
+    display: flex !important;      /* FORCE l'alignement en ligne */
+    flex-direction: row !important; /* Interdit le mode colonne */
+    flex-wrap: nowrap !important;   /* Interdit le passage à la ligne */
+    gap: 15px;
+    overflow-x: auto;               /* Scroll horizontal si nécessaire */
+    padding: 10px 0;
+    width: 100%;
+}
+
+/* Style des Cartes */
+.anime-card {
+    flex: 0 0 calc(16.66% - 15px) !important; /* 6 cartes sur la ligne */
+    min-width: 160px;
+    background: #535454;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+.anime-card:hover {
+    transform: scale(1.03);
+}
+
+/* Image de la carte */
+.card-image {
+    height: 220px !important; 
+    width: 100%;
+    position: relative;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+/* Badges sur l'image */
+.card-badges {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    display: flex;
+    gap: 5px;
+}
+
+.badge-type {
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+/* Infos sous l'image */
+.card-info {
+    padding: 12px;
+    text-align: center;
+    color: #fff;
+}
+
+.card-info h3 {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    white-space: nowrap;      
+    overflow: hidden;         
+    text-overflow: ellipsis; 
+}
+
+/* Boîte de statut (Tome disponible) */
+.status-box {
+    background: #a2a2a2;
+    padding: 6px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 0.75rem;
+    color: #000000;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   5. CATALOGUE & GRILLE DES CATÉGORIES
+   ========================================================================== */
+.cat-section {
+    padding: 60px 5%;
+    background-color: #ffffff; 
+    font-family: 'Arial', sans-serif;
+}
+
+.cat-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.cat-header h2 {
+    font-size: 2rem;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.cat-header p {
+    color: #666;
+}
+
+/* Grille */
+.cat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* La Carte individuelle */
+.cat-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 16px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.cat-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+    border-color: #ddd;
+    background-color:#cce3e8 ;
+}
+
+/* L'icône ronde */
+.cat-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    background: #f8f9fa;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cat-icon-wrapper img {
+    width: 35px;
+    height: 35px;
+}
+
+.cat-card h3 {
+    color: #005a70; /* Bleu caractéristique */
+    margin-bottom: 20px;
+    font-size: 1.25rem;
+}
+
+/* Liens internes */
+.cat-links {
+    list-style: none;
+    padding: 0;
+}
+
+.cat-links li {
+    margin-bottom: 12px;
+}
+
+.cat-links li a {
+    text-decoration: none;
+    color: #444;
+    font-size: 0.95rem;
+    border-bottom: 1px solid transparent;
+    transition: 0.2s;
+}
+
+.cat-links li a:hover {
+    color: #000;
+    border-bottom: 1px dotted #005a70;
+}
+
+/* ==========================================================================
+   6. RÉASSURANCE (LIVRAISON / SATISFACTION)
+   ========================================================================== */
+.reassurance-section {
+    background-color: #fff;
+    padding: 60px 20px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.reassurance-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.reassurance-item {
+    padding: 10px;
+}
+
+.reassurance-icon {
+    margin-bottom: 20px;
+}
+
+.reassurance-icon img {
+    width: 50px; /* Taille des icônes */
+    height: 50px;
+    /* Transformation des icônes en orange */
+    filter: invert(53%) sepia(88%) saturate(1234%) hue-rotate(359deg) brightness(102%) contrast(106%);
+}
+
+.reassurance-item h4 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.reassurance-item p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+    padding: 0 10px;
+}
+
+/* Version Mobile */
+@media (max-width: 768px) {
+    .reassurance-container {
+        grid-template-columns: 1fr 1fr; /* 2 par 2 sur mobile */
+    }
+}
+
+/* ==========================================================================
+   7. COMMUNAUTÉ & QUALITÉ
+   ========================================================================== */
+
+/* Style Communauté */
+.community-section {
+    padding: 80px 5%;
+    background-color: #fafafa;
+}
+
+.community-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.community-text { flex: 1; min-width: 300px; }
+
+.community-text h2 { font-size: 2.2rem; margin-bottom: 20px; color: #1a1a1a; }
+
+.badge {
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 20px;
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: white;
+}
+.ig { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+.tk { background: #000; }
+
+.community-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.grid-item img {
+    width: 100%;
+    border-radius: 12px;
+    filter: grayscale(20%);
+    transition: 0.3s;
+}
+.grid-item img:hover { filter: grayscale(0%); transform: scale(1.05); }
+
+/* Style Qualité */
+.quality-section {
+    padding: 100px 5%;
+    background: #fff;
+}
+
+.quality-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.quality-image img {
+    width: 450px;
+    border-radius: 30px;
+    box-shadow: 20px 20px 0px #f0f7f9; /* Petit effet de cadre décalé */
+}
+
+.tag { color: #005a70; font-weight: bold; letter-spacing: 2px; font-size: 0.8rem; }
+
+.quality-info h2 { font-size: 2.5rem; margin: 15px 0; color: #111; }
+
+.quality-list { list-style: none; padding: 0; margin-top: 25px; }
+
+.quality-list li {
+    margin-bottom: 15px;
+    padding-left: 30px;
+    position: relative;
+}
+
+.quality-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #27ae60;
+    font-weight: bold;
 }
 
 
-.card {
-  text-align: center;
-}
-
-.card img {
-  width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
-
-.card p {
-  margin-top: 8px;
-  font-weight: bold;
-}
-
-/* Footer */
-footer {
-  background: #000;
-  color: #fff;
-  text-align: center;
-  padding: 15px 10px 10px;  /* top 15px, côtés 10px, bas 40px */
-  font-size: 14px;
-}
 
 
-footer p {
-  margin-bottom: 8px;
-}
 
-.footer-links a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 5px;
-}
 
-.footer-links a:hover {
-  text-decoration: underline;
-}
 
 /* ======================================================================================================================================================
  
@@ -239,9 +623,8 @@ CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE 
   font-family: Arial, sans-serif;
 }
 
-
-/* Catalogue section */
-.catalogue h1 {
+/* Section Catalogue */
+.titre-page h1 {
   background: #3f51b5;
   color: white;
   padding: 15px 30px;
@@ -249,8 +632,10 @@ CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE 
 
 .filters {
   display: flex;
+  padding: 15px;
   gap: 10px;
-  padding: 20px 30px;
+  flex: 1;
+  overflow-x: visible;
 }
 
 .filters input,
@@ -258,6 +643,7 @@ CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE 
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  flex: 1 1 auto;
 }
 
 /* Cards */
@@ -302,11 +688,22 @@ CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE 
   margin-top: 10px;
 }
 
+.card-catalogue:hover {
+   border-color: #000000;
+   background-color: #898989;
+}
+
 .card-catalogue button:hover {
   background: #2c3e99;
 }
 
-/* Pagination */
+
+.card-catalogue a {
+  color: rgb(5, 5, 5);
+  text-decoration: none;
+}
+
+
 .pagination {
   display: flex;
   justify-content: center;
@@ -331,22 +728,9 @@ CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE CATALOGUE 
   font-weight: bold;
 }
 
-
-/* Footer */
-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: black;
-  color: white;
-  padding: 15px 30px;
-  margin-top: 30px;
-}
-
-footer nav a {
-  color: white;
-  margin-left: 20px;
-  text-decoration: none;
+.pagination button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
 }
 
 
@@ -367,9 +751,9 @@ footer nav a {
 
 
 .cart-list {
-  flex: 2;
-  display: flex;
-  flex-direction: column;
+   display: grid;
+  grid-auto-flow: column;        /* Remplit les colonnes */
+  grid-template-rows: repeat(4, auto); /* 5 cartes par colonne */
   gap: 15px;
 }
 
@@ -377,10 +761,15 @@ footer nav a {
   display: flex;
   background: white;
   border-radius: 8px;
-  padding: 10px;
+  padding: 7px;
+  margin-top: 10px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   align-items: center;
   transition: transform 0.2s;
+
+  width: 100%;
+  max-width: 600px;
+
 }
 
 .cart-item:hover {
@@ -420,6 +809,7 @@ footer nav a {
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-left: 200px;
 }
 
 .actions button {
@@ -429,6 +819,8 @@ footer nav a {
   border-radius: 4px;
   cursor: pointer;
   font-weight: bold;
+  color: #236cb0;
+  font-size: 0.9rem;
 }
 
 .actions button:hover {
@@ -439,6 +831,7 @@ footer nav a {
   color: #e63946;
   text-decoration: none;
   font-size: 0.9rem;
+  font-weight: bold;
 }
 
 /* ----- RÉSUMÉ COMMANDE ----- */
@@ -446,6 +839,7 @@ footer nav a {
   flex: 1;
   background: white;
   border-radius: 10px;
+  margin-top: 7px;
   padding: 20px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
@@ -456,19 +850,33 @@ footer nav a {
   font-size: 1.2rem;
 }
 
-.summary-line, .summary-total {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
-  font-size: 0.95rem;
+
+
+.summary-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
 }
 
-.summary-total {
-  font-weight: bold;
-  color: #222;
-  border-top: 1px solid #ddd;
-  padding-top: 10px;
+.summary-list li {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
 }
+
+
+.resume-list {
+font-weight:bold;
+  }
+
+.summary-total {
+  font-weight: bolder;
+  color: #3046c5;
+  border-top: 1px solid #ddd;
+  padding-top: .8rem;
+  margin-top: .5rem;
+}
+
 
 .checkout {
   width: 100%;
@@ -480,6 +888,9 @@ footer nav a {
   border-radius: 5px;
   cursor: pointer;
   font-size: 1rem;
+  display: block;
+  text-align: center;
+  text-decoration: none;
 }
 
 .checkout:hover {
@@ -557,6 +968,62 @@ footer nav a {
   border-color: #3046c5;
 }
 
+
+/* Style de la fenêtre de zoom */
+.lightbox {
+  display: none; /* Caché par défaut */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9); /* Fond noir transparent */
+  cursor: zoom-out;
+}
+
+/* L'image normale dans la lightbox */
+.lightbox-content {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  max-height: 80%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: zoomAni 0.3s; /* Petite animation d'ouverture */
+  transition: transform 0.3s ease; /* Transition fluide pour le zoom */
+  cursor: zoom-in;
+}
+
+/* L'image quand on clique dessus (Zoom X2) */
+.lightbox-content.zoomed {
+  transform: translateY(-50%) scale(2);
+  cursor: zoom-out;
+}
+
+@keyframes zoomAni {
+  from {transform: translateY(-50%) scale(0)} 
+  to {transform: translateY(-50%) scale(1)}
+}
+
+.close-lightbox {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* On ajoute un curseur de loupe sur l'image principale */
+#main-img {
+  cursor: zoom-in;
+}
+
+
+
 /* ----- INFOS PRODUIT ----- */
 .product-info h2 {
   color: #222;
@@ -569,7 +1036,7 @@ footer nav a {
 }
 
 .price {
-  color: #3046c5;
+  color:#4caf50;
   font-size: 1.2rem;
   font-weight: 600;
   margin: 15px 0;
@@ -604,8 +1071,60 @@ footer nav a {
 /* ======= ACHAT ======== */
 
 /* Selecteur de tomes */
+
+.details-plage h3 {
+  color: #000;
+  margin-top: 12px;
+}
+
+
+
 .range-selector {
 margin-top: 25px;
+display: inline-flex;
+  align-items: center;
+  border: 2px solid #1e0ff1; /* jaune doux comme sur ta capture */
+  border-radius: 20px;
+  overflow: hidden;
+  width: max-content;
+  font-family: Arial, sans-serif;
+  margin-right: 100px;
+  margin-left: 20px;
+}
+
+.range-selector:last-child {
+  margin-right: 0;
+}
+
+.qty-btn {
+  background: none;
+  border: none;
+  color: #000000;
+  font-size: 1.5rem;
+  padding: 4px 12px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s;
+}
+
+.qty-btn:hover {
+  background-color: #777777;
+}
+
+.qty-input {
+  width: 36px;
+  border: none;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1rem;
+  outline: none;
+  -moz-appearance: textfield;
+}
+
+.qty-input::-webkit-inner-spin-button,
+.qty-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 /* Validation Panier */
@@ -613,25 +1132,15 @@ margin-top: 25px;
   margin-top: 25px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
 }
 
-.purchase-box label {
-  font-weight: 500;
-}
-
-.purchase-box input {
-  width: 60px;
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
 
 .add-to-cart {
   background: #4caf50;
   color: white;
   border: none;
-  padding: 8px 14px;
+  padding: 8px 10px;
   border-radius: 4px;
   cursor: pointer;
 }
@@ -640,6 +1149,16 @@ margin-top: 25px;
   background: #43a047;
 }
 
+
+.thumbnail-gallery img {
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.thumbnail-gallery img:hover {
+  opacity: 0.7;
+  border: 2px solid #ff4500; /* Optionnel : ajoute une bordure au survol */
+}
 
 /* ==============================================================================================
 FORMULAIRE
@@ -664,13 +1183,7 @@ FORMULAIRE
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-h2 {
-  color: #333;
-  margin-bottom: 15px;
-  border-bottom: 2px solid #3f51b5;
-  padding-bottom: 8px;
-  margin-top: 15px;
-}
+
 
 label {
   display: block;
@@ -755,6 +1268,39 @@ input:focus, select:focus {
   border-bottom: none;
 }
 
+.cart-formulaire {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 12px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+    margin-bottom: 12px;  
+}
+
+.cart-formulaire img {
+   width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+
+.shadow {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.price-checkout {
+font-weight: 600;
+margin-top: 8px;
+white-space: nowrap;
+margin-left: 80px;
+color: #3f51b5;
+
+}
+
 .order-list {
   list-style: none;
   padding: 0;
@@ -780,9 +1326,30 @@ hr {
 }
 
 .total {
-  font-size: 18px;
-  color:#236cb0;
+  font-size: 16px;
   font-weight: bold;
+font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.checkout-panier {
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px;
+  color: rgb(93, 93, 93);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 500;
+  border-color: #666;
+  background: #e0e0e0;
+}
+
+.checkout-panier:hover {
+  background: #777777;
+  color: #e0e0e0;
 }
 
 
@@ -807,15 +1374,13 @@ CONFIRMATION CONFIRMATION CONFIRMATION CONFIRMATION CONFIRMATION CONFIRMATION CO
     text-align: center;
 }
 
+
+
 .icon-check {
     font-size: 3rem;
     color: #4CAF50;
 }
 
-h2 {
-    color:#050505;
-    margin-top: 15px;
-}
 
 .message {
     margin-bottom: 30px;
